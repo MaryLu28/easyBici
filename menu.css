@@ -11,18 +11,18 @@ header {
 	width:100%;
 }
 
-header nav {
+.nav {
 	width:90%;
 	max-width:1000px;
 	margin:20px auto;
-	background:#024959;
+	background:#ffffff;
 }
 
 .menu_bar {
 	display:none;
 }
 
-header nav ul {
+.ul {
 	overflow:hidden;
 	list-style:none;
 }
@@ -31,19 +31,19 @@ header nav ul li {
 	float:left;
 }
 
-header nav ul li a {
-	color:#fff;
+.a {
+	color:#000;
 	padding:20px;
 	display:block;
 	text-decoration:none;
 }
 
-header nav ul li span {
+span {
 	margin-right:10px;
 }
 
-header nav ul li a:hover {
-	background:#037E8C;
+.a:hover {
+	background:#00C4BE;
 }
 
 section {
@@ -51,7 +51,7 @@ section {
 }
 
 @media screen and (max-width:800px ) {
-	header nav {
+	.nav {
 		width:80%;
 		height:100%;
 		left:-100%;
@@ -59,7 +59,7 @@ section {
 		position: fixed;
 	}
 
-	header nav ul li {
+	.li {
 		display:block;
 		float:none;
 		border-bottom:1px solid rgba(255,255,255, .3);
@@ -74,7 +74,7 @@ section {
 	.menu_bar .bt-menu {
 		display:block;
 		padding:20px;
-		background:#024959;
+		background:#52DD27;
 		color:#fff;
 		text-decoration:none;
 		font-weight: bold;
@@ -85,6 +85,6 @@ section {
 	}
 
 	.menu_bar span {
-		padding-right: 10px; 
+		padding-right: 10; 
 	}
 }
