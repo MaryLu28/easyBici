@@ -27,7 +27,7 @@ header {
 	list-style:none;
 }
 
-header nav ul li {
+.li {
 	float:left;
 }
 
