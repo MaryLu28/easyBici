@@ -11,6 +11,19 @@ header {
 	width:100%;
 }
 
+input[type=search] {
+    width: 300px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-image: url('searchicon.png');
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 10px 12px 10px 30px; 
+}
+
 .nav {
 	width:90%;
 	max-width:1000px;
@@ -37,6 +50,13 @@ header {
 	display:block;
 	text-decoration:none;
 }
+.front {
+	color:#000;
+	padding:20px;
+	display:block;
+	text-decoration:none;
+	z-index: 900;	
+}
 
 span {
 	margin-right:10px;
@@ -58,7 +78,7 @@ section {
 		margin:0;
 		position: fixed;
 		z-index: 1000;
-		
+
 	}
 
 	.li {
