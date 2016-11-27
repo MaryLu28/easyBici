@@ -141,7 +141,7 @@ img {
 .btn.btn-signin:hover,
 .btn.btn-signin:active,
 .btn.btn-signin:focus {
-    background-color: rgb(12, 97, 33);
+    background-color: rgb(82, 221, 39);
 }
 
 .forgot-password {
@@ -151,5 +151,5 @@ img {
 .forgot-password:hover,
 .forgot-password:active,
 .forgot-password:focus {
-    color: rgb(12, 97, 33);
+    color: rgb(82, 221, 39);
 }
