@@ -62,8 +62,15 @@ span {
 	margin-right:10px;
 }
 
+.icono {
+	margin-right:10px;
+	width: 16px
+}
+
 .a:hover {
 	background:#00C4BE;
+	color:#000;
+	text-decoration:none;
 }
 
 section {
