@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>
+        Crear Cuenta
+    </title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="http://www.tutorialspoint.com/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="crear_cuenta.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="one-page-wonder.css" rel="stylesheet">
+
+    <script>
+        $(function () {
+            $('.button-checkbox').each(function () {
+
+                // Settings
+                var $widget = $(this),
+                    $button = $widget.find('button'),
+                    $checkbox = $widget.find('input:checkbox'),
+                    color = $button.data('color'),
+                    settings = {
+                        on: {
+                            icon: 'glyphicon glyphicon-check'
+                        },
+                        off: {
+                            icon: 'glyphicon glyphicon-unchecked'
+                        }
+                    };
+
+                // Event Handlers
+                $button.on('click', function () {
+                    $checkbox.prop('checked', !$checkbox.is(':checked'));
+                    $checkbox.triggerHandler('change');
+                    updateDisplay();
+                });
+                $checkbox.on('change', function () {
+                    updateDisplay();
+                });
+
+                // Actions
+                function updateDisplay() {
+                    var isChecked = $checkbox.is(':checked');
+
+                    // Set the button's state
+                    $button.data('state', (isChecked) ? "on" : "off");
+
+                    // Set the button's icon
+                    $button.find('.state-icon')
+                        .removeClass()
+                        .addClass('state-icon ' + settings[$button.data('state')].icon);
+
+                    // Update the button's color
+                    if (isChecked) {
+                        $button
+                            .removeClass('btn-default')
+                            .addClass('btn-' + color + ' active');
+                    } else {
+                        $button
+                            .removeClass('btn-' + color + ' active')
+                            .addClass('btn-default');
+                    }
+                }
+
+                // Initialization
+                function init() {
+
+                    updateDisplay();
+
+                    // Inject the icon if applicable
+                    if ($button.find('.state-icon').length == 0) {
+                        $button.prepend('<i class="state-icon ' + settings[$button.data('state')].icon + '"></i>');
+                    }
+                }
+                init();
+            });
+        });
+    </script>
+
+</head>
+
+<body>
+
+    <!-- Full Width Image Header -->
+
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <!-- First Featurette -->
+        <div class="featurette" id="about">
+            <div class="container">
+                <div class="row">
+                    <form role="form">
+                        <hr class="colorgraph">
+                        <div class="form-group">
+                            <input type="text" name="first_name" id="first_name" class="form-control input-lg" placeholder="Nombre" tabindex="1">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="last_name" id="last_name" class="form-control input-lg" placeholder="Apellido" tabindex="2">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" id="email" class="form-control input-lg" placeholder="Correo Electronico" tabindex="4">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" name="password" id="password" class="form-control input-lg" placeholder="Contraseña" tabindex="5">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" name="password_confirmation" id="password_confirmation" class="form-control input-lg" placeholder="Confirmar Contraseña" tabindex="6">
+                        </div>
+                       <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Registrarse</button>
+                    </form>
+                </div>     
+            </div>
+        </div>
+
+        <!-- jQuery -->
+        <script src="http://www.tutorialspoint.com/bootstrap/scripts/jquery.min.js">
+        </script>
+
+        <!-- Bootstrap Core JavaScript -->
+        <script src="http://www.tutorialspoint.com/bootstrap/js/bootstrap.min.js">
+        </script>
+
+</body>
+
+</html>
