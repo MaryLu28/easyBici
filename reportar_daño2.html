@@ -2,20 +2,23 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Easy Bici - Reportar incidente</title>
-	 <!-- Custom CSS -->
-    <link href="reportar_incidente.css" rel="stylesheet">
-    <link href="one-page-wonder.css" rel="stylesheet">
+	<title>Easy Bici - Reportar daño</title>
+	
+	<!-- Custom CSS -->
+    <link href="reportar_daño.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="menu.css">
 	<link rel="stylesheet" type="text/css" href="fonts.css">
 
-	 <!-- Bootstrap Core CSS -->
+	<link href="one-page-wonder.css" rel="stylesheet">
+
+	<!-- Bootstrap Core CSS -->
     <link href="http://www.tutorialspoint.com/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 
+	<!-- Menú -->
 	<div class="menu_bar">
-		<a href="#" class="bt-menu"><span class="icon-menu"></span>Reportar incidente</a>
+		<a href="#" class="bt-menu"><span class="icon-menu"></span>Reportar daño</a>
 	</div>
 
 	<nav class="nav">
@@ -28,20 +31,29 @@
 			<li class="li"><a class="a" href="progreso_sem.html"><img class="icono" src="imagenes/progreso.png">Progreso</a></li>
 		</ul>
 	</nav>
+
 </head>
 
 <body>
 
 	<div class="contenedor">
-	    <a href="reportar_daño.html" class="btn btn-lg btn-primary btn-block btn-signin" type="submit">
-	    	<div><img src="imagenes/bici.png"></div>
-	    Bicicleta</a>
-	    <a href="incidente_estacion.html" class="btn btn-lg btn-primary btn-block btn-signin" type="submit">
-	    	<div><img src="imagenes/estacion.png"></div>
-	    Estación</a>
-	    <a href="otro_incidente.html" class="btn btn-lg btn-primary btn-block btn-signin" type="submit">
-	    	<div><img src="imagenes/icon-warning.svg"></div>
-	    Otros</a>
+		
+
+       	<img class="bici" src="imagenes/bici.png" width="256" height="256" usemap="map">
+       		<map name="map">
+       			<area href="reportar_daño4.html" shape="rect" coords="187,131,210,136"></area>
+       		</map>
+
+       	<div>
+       		<a href="reportar_daño.html"><span class="label etiqueta">Asiento X</span></a>
+       	</div>
+
+       	<input type="tel" name="numero_estacion" id="numero_estacion" class="form-control1 input-lg" placeholder="Número de la Estación" tabindex="1">
+	    <button type="button" class="btn btn-default btn-circle btn-lg">
+    		<img class="camara" src="imagenes/camara.png">
+        </button>
+        <a href="mapa.html" class="btn btn-lg btn-primary btn-block btn-signin" type="submit" style="height: 40px; width: 100px; padding-top: 10px; font-size:15px;margin-left:15px; margin-top: 15px;">Enviar</a>
+
 	</div>
 
 	<script src="http://code.jquery.com/jquery-latest.js"></script>
