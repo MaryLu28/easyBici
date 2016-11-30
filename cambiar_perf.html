@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>
+        Easy Bici - Crear Cuenta
+    </title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="http://www.tutorialspoint.com/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="cambiar_perf.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="menu.css">
+    <!-- Custom CSS -->
+    <link href="one-page-wonder.css" rel="stylesheet">
+
+    <!-- Menú -->
+    <div class="menu_bar">
+        <a href="#" class="bt-menu"><span class="icon-menu"></span>Mi Perfil</a>
+    </div>
+
+    <nav class="nav">
+        <ul class="ul">
+            <li class="li"><a class="a" href="#"><span class="icon-map"></span>Mapa</a></li>
+            <li class="li"><a class="a" href="#"><span class="icon-user"></span>Mi perfil</a></li>
+            <li class="li"><a class="a" href="#"><img class="icono" src="imagenes/reportar.png">Reportar incidente</a></li>
+            <li class="li"><a class="a" href="#"><img class="icono" src="imagenes/rutas.png">Rutas guardadas</a></li>
+            <li class="li"><a class="a" href="#"><span class="icon-star-full"></span>Destinos populares</a></li>
+            <li class="li"><a class="a" href="#"><img class="icono" src="imagenes/progreso.png">Progreso</a></li>
+        </ul>
+    </nav>
+
+    <script>
+        $(function () {
+            $('.button-checkbox').each(function () {
+
+                // Settings
+                var $widget = $(this),
+                    $button = $widget.find('button'),
+                    $checkbox = $widget.find('input:checkbox'),
+                    color = $button.data('color'),
+                    settings = {
+                        on: {
+                            icon: 'glyphicon glyphicon-check'
+                        },
+                        off: {
+                            icon: 'glyphicon glyphicon-unchecked'
+                        }
+                    };
+
+                // Event Handlers
+                $button.on('click', function () {
+                    $checkbox.prop('checked', !$checkbox.is(':checked'));
+                    $checkbox.triggerHandler('change');
+                    updateDisplay();
+                });
+                $checkbox.on('change', function () {
+                    updateDisplay();
+                });
+
+                // Actions
+                function updateDisplay() {
+                    var isChecked = $checkbox.is(':checked');
+
+                    // Set the button's state
+                    $button.data('state', (isChecked) ? "on" : "off");
+
+                    // Set the button's icon
+                    $button.find('.state-icon')
+                        .removeClass()
+                        .addClass('state-icon ' + settings[$button.data('state')].icon);
+
+                    // Update the button's color
+                    if (isChecked) {
+                        $button
+                            .removeClass('btn-default')
+                            .addClass('btn-' + color + ' active');
+                    } else {
+                        $button
+                            .removeClass('btn-' + color + ' active')
+                            .addClass('btn-default');
+                    }
+                }
+
+                // Initialization
+                function init() {
+
+                    updateDisplay();
+
+                    // Inject the icon if applicable
+                    if ($button.find('.state-icon').length == 0) {
+                        $button.prepend('<i class="state-icon ' + settings[$button.data('state')].icon + '"></i>');
+                    }
+                }
+                init();
+            });
+        });
+    </script>
+
+</head>
+
+<body>
+
+    <!-- Full Width Image Header -->
+
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <!-- First Featurette -->
+        <div class="featurette" id="about">
+            <div class="container">
+                <div class="row">
+                    <form role="form">
+                        <hr class="colorgraph">
+                        <div class="form-group">
+                            <input type="text" name="first_name" id="first_name" class="form-control input-lg" placeholder="Carlos" tabindex="1">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="last_name" id="last_name" class="form-control input-lg" placeholder="Ferreira" tabindex="2">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" id="email" class="form-control input-lg" placeholder="carlos@easybici.com" tabindex="4">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" name="password" id="password" class="form-control input-lg" placeholder="Contraseña" tabindex="5">
+                        </div>
+                       <p>
+                            <a href="#" class="btn btn-sq-lg btn-primary">
+                                Guardar
+                            </a>
+                            <a href="#" class="btn btn-sq-lg btn-primary">
+                                Descartar
+                            </a>
+                        </p>
+                    </form>
+                </div>     
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="http://www.tutorialspoint.com/bootstrap/scripts/jquery.min.js">
+    </script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="http://www.tutorialspoint.com/bootstrap/js/bootstrap.min.js">
+    </script>
+    
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="menu.js"></script>
+
+</body>
+
+</html>

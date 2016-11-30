@@ -1,0 +1,63 @@
+.btn {
+    font-weight: 700;
+    /*height: 36px;*/
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    cursor: default;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.btn.btn-primary {
+    /*background-color: #4d90fe; */
+    background-color: rgb(0, 196, 190);
+    /* background-color: linear-gradient(rgb(104, 145, 162), rgb(12, 97, 33));*/
+    padding: 2px;
+    font-weight: 700;
+    font-size: 20px;
+    height: 36px;
+    width: 150px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    border: none;
+    -o-transition: all 0.218s;
+    -moz-transition: all 0.218s;
+    -webkit-transition: all 0.218s;
+    transition: all 0.218s;
+    margin-right: 15px;
+    margin-left: 15px; 
+}
+
+.btn.btn-primary:hover,
+.btn.btn-primary:active,
+.btn.btn-primary:focus {
+    background-color: rgb(82, 221, 39);
+}
+
+.contenedor {
+    margin-top: 50px;
+    margin-left: 80px;
+    margin-right: 80px;
+}
+
+img {
+    width: 70px;
+    height: 40px;
+    padding-right: 10px; 
+}
+
+p {
+    text-align: left;
+}
+
+.metodo-pago {
+    color: rgb(104, 145, 162);
+}
+
+.metodo-pago:hover,
+.metodo-pago:active,
+.metodo-pago:focus {
+    color: rgb(82, 221, 39);
+}
